@@ -1,12 +1,34 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import '../css/Navbar.css'
+import {useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
+import { setAutorizationStatus } from '../store/Reducers/userReducer';
 
 const Navbar = () => {
+  const dispatch = useDispatch()
+
+  const user = useSelector((state) => state.user.user)
+  const isAutorized = useSelector((state) => state.user.isAutorized)
+
+  useEffect(() => {
+    console.log('1')
+    console.log(user)
+    console.log('2')
+    console.log(isAutorized)
+    console.log('3')
+
+    if (isAutorized !== 'false') {
+      document.getElementById("userInfo").innerHTML = user.surname + ' ' + user.name + ' ' + user.dads_name
+      document.getElementById("exitButton").style.display = 'block'
+    }
+  }, [])
   
   function UnAutorize() {
     document.getElementById("exitButton").style.display = 'none'
     document.getElementById("userInfo").innerHTML = ""
+    document.location = '/' 
+    dispatch(setAutorizationStatus('false'))
   }
 
   return (

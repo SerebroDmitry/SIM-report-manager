@@ -1,8 +1,11 @@
 import React from 'react'
 import '../css/Autorization.css'
 import { useEffect } from 'react'
+import {useDispatch} from 'react-redux';
+import { setAutorizationStatus, setUser } from '../store/Reducers/userReducer';
 
 const Autorization = () => {
+  const dispatch = useDispatch()
   let data  //тут мы храним данные о пользователях, получаемые из API
   const usersUrl = "api/users"; // путь к данным о пользователях
   let phoneInput = React.createRef(); //реф для поля ввода телефона
@@ -32,6 +35,7 @@ const Autorization = () => {
   //
   //
   function Autorization () {
+
     userPhoneForEnter = phoneInput.current.value;  //забираем значения из инпутов
     userPasswordForEnter = passwordInput.current.value;  //забираем значения из инпутов
     fetch(usersUrl) //получение информации из API
@@ -57,6 +61,10 @@ const Autorization = () => {
           userID = find
           document.getElementById("userInfo").innerHTML = data["userDate"][userID].surname + ' ' + data["userDate"][userID].name + ' ' + data["userDate"][userID].dads_name
           document.getElementById("exitButton").style.display = 'block'
+          
+          dispatch(setUser(data['userDate'][userID]))
+          dispatch(setAutorizationStatus('true'))
+
           userPhoneForEnter = ""; //обнуляем переменные для хранения значений из инпутов
           userPasswordForEnter = ""; //обнуляем переменные для хранения значений из инпутов
           find = 9999; //обнуляем идентификатор поиска
