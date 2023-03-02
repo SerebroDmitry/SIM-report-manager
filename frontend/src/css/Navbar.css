@@ -43,11 +43,26 @@
 }
 
 .usersInfo {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   grid-area: B;
   background-color:rgb(255, 255, 255);
+  font-size: 13px;
+  font-family: 'Montserrat Alternates Regular';
+  color: rgba(0, 0, 0, 0.747);
+}
+
+.exitDiv {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.exitButton {
+  display: none;
+  font-size: 12px;
+  width: 60px;
 }
 
 @media screen and (max-width: 800px) {

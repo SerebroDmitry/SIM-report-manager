@@ -3,6 +3,11 @@ import { NavLink } from 'react-router-dom'
 import '../css/Navbar.css'
 
 const Navbar = () => {
+  
+  function UnAutorize() {
+    document.getElementById("exitButton").style.display = 'none'
+    document.getElementById("userInfo").innerHTML = ""
+  }
 
   return (
     <div className='headerWarpper'>
@@ -13,7 +18,11 @@ const Navbar = () => {
             <NavLink to='#' className={({isActive}) => isActive ? 'activeNav' : 'Nav'}>Прочее</NavLink> {/*/others*/}
         </div>
         <div className='usersInfo'>
-            User info    
+            <p id="userInfo" className='pUser'></p> 
+            <div className='exitDiv'>
+              <button className='exitButton' id='exitButton' onClick={() => UnAutorize()}>Выход</button>  
+            </div>
+              
         </div>
     </div>
   )

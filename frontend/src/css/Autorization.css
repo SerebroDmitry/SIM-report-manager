@@ -33,7 +33,7 @@ input:focus {
     outline: 2px solid rgb(0, 162, 255);
 }
 
-p {
+.pAutorization {
     font-family: 'Montserrat Alternates Regular';
     font-size: 18px;
 }
