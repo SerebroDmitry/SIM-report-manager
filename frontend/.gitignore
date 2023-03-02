@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/fronend/node_modules
 /.pnp
 .pnp.js
 
