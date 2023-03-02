@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Montserrat Alternates Regular';
+  src: url(/src/css/fonts/20806.ttf);
+}
+
+
+.Nav {
+    color: rgb(143, 142, 142);
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Montserrat Alternates Regular';
+    text-shadow: rgb(227, 227, 233) 1px 0 1px;
+    padding-top: 20px;
+}
+.activeNav {
+    color: rgb(190, 190, 190);
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Montserrat Alternates Regular';
+    text-shadow: rgb(227, 227, 233) 1px 0 1px;
+    padding-top: 20px;
+}
+
+.headerWarpper {
+  height: 100%;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: 9fr 3fr;
+  grid-template-areas: "A B";
+  background-color: rgb(255, 255, 255);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  grid-area: A;
+  background-color:rgb(255, 255, 255);
+}
+
+.usersInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: B;
+  background-color:rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 800px) {
+    .headerWarpper {
+      display: none;
+    }
+}
