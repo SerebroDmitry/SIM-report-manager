@@ -46,8 +46,8 @@ app.post("/api/newusers", (req, response) => {
   async function postUserData() {
     const connection = await mysql.createConnection(config);
     connection.query(
-      "INSERT INTO `users`(`id`, `phone_number`, `name`, `surname`, `dads_name`, `adress`, `email`, `company`, `password`)" +
-        ` VALUES (null, ${req.body.phone_number}, ${req.body.name}, ${req.body.surname}, ${req.body.dads_name}, ${req.body.adress}, ${req.body.email}, ${req.body.company}, ${req.body.password})`,
+      "INSERT INTO `users`(`id`, `phone_number`, `name`, `surname`, `dads_name`, `adress`, `email`, `company`, `password`, `type`)" +
+        ` VALUES (null, ${req.body.phone_number}, ${req.body.name}, ${req.body.surname}, ${req.body.dads_name}, ${req.body.adress}, ${req.body.email}, ${req.body.company}, ${req.body.password}, "user")`,
       req.body,
       (error, res) => {
         if (error) throw error;

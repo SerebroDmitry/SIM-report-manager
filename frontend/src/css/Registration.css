@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'Montserrat Alternates Regular';
+    src: url(/src/css/fonts/20806.ttf);
+}
+
+.RegistrationDiv {
+    width: 35vw;
+    height: 50vh;
+    border: 2px solid  rgb(0, 162, 255);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-areas: 
+        "A A"
+        "B C"
+        "D E"
+        "F G"
+        "H I"
+        "J K"
+        "L M"
+        "O P"
+        "Q R"
+        "S S";
+    font-family: 'Montserrat Alternates Regular';
+}
+
+.inputThere {
+    width: 330px;
+}
+
+.LabelReg {
+    grid-area: A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PhoneLabel {
+    grid-area: B;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.PhoneInput {
+    grid-area: C;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.NameLabel {
+    grid-area: D;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.NameInput {
+    grid-area: E;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.SurnameLabel {
+    grid-area: F;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.SurnameInput {
+    grid-area: G;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.FathernameLabel {
+    grid-area: H;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.FathernameInput {
+    grid-area: I;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.AdressLabel {
+    grid-area: J;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.AdressInput {
+    grid-area: K;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.EmailLabel {
+    grid-area: L;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.EmailInput {
+    grid-area: M;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.CompanyLabel {
+    grid-area: O;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.CompanyInput {
+    grid-area: P;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.PassLabel {
+    grid-area: Q;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.PassInput {
+    grid-area: R;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.ButtonsDiv{
+    grid-area: S;
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    grid-template-areas: "A1 A2";
+}
+
+.ButtonReg {
+    grid-area: A1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtonCancel {
+    grid-area: A2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

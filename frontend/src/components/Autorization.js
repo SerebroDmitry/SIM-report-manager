@@ -14,6 +14,7 @@ const Autorization = () => {
   let userPasswordForEnter = ""; // тут мы храним данные, введенные пользователем в инпут и затем сравниваем их с данными из БД
   let userID //тут мы храним ID авторизованного пользователя
 
+
   //счетчик поиска в БД
   let find = 9999;
 
@@ -88,7 +89,7 @@ const Autorization = () => {
         <input placeholder='Пароль' type='password' ref={passwordInput}></input>
       </div>
       <div className='row3col1'>
-        <button onClick={() => Autorization()}>OK</button>
+        <button onClick={() => Autorization()}>Вход</button>
       </div>
       <div className='row3col2'>
         <button onClick={ () => document.location='/reg' }>Регистрация</button>
