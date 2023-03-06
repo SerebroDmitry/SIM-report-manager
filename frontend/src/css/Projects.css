@@ -1,0 +1,34 @@
+.mainTableDiv {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    grid-template-areas: "A B";
+    border: 1px solid  rgb(0, 162, 255);
+    border-radius: 5px;
+    margin-top: -1px;
+    padding-left: 10px;
+    max-width: 100vh;
+}
+
+.LeftTableDiv {
+    grid-area: A;
+    padding-right: 20px;
+    word-break: break-all;
+}
+
+.RightTableDiv {
+    grid-area: B;
+    padding-left: 60px;
+}
+
+.Adress {
+    font-size: 17px;
+}
+
+.ErpGfcName {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.Information {
+    font-size: 13px;
+}
