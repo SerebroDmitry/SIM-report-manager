@@ -41,7 +41,7 @@ input:focus {
 button {
     height: 30px;
     width: 120px;
-    border-radius: 8px;
+    border-radius: 15px;
     background-color: rgb(0, 162, 255);
     border: 0px solid  rgb(0, 162, 255);
     font-family: 'Montserrat Alternates Regular';

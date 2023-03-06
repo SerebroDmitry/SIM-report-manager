@@ -18,7 +18,14 @@ const Projects = () => {
     {tableData && tableData.map(item => (
       <div key={item.id} className='mainTableDiv'>
         <div className='LeftTableDiv'>
-          <p className='Adress'>{item.adress}</p>
+          <div className='AdressLabelDiv'>
+            <p className='Adress'>{item.adress}</p>
+          </div>
+          <div className='PlaneDiv'>
+            <p className='Plane'>План СМР: {item.plane}</p><br />
+            <p className='Plane'>Факт СМР: </p>
+          </div>
+          
         </div>
         <div className='RightTableDiv'>
           <span className='ErpGfcName'>ЕРП: </span>
@@ -28,8 +35,8 @@ const Projects = () => {
           <span className='ErpGfcName'>Наименование: </span>
           <span className='Information'>{item.object_name}</span><br />
           <div className='buttonsDiv'>
-            <button className='ButtonSmall'>Отчет</button>
-            <button className='ButtonSmall'>План</button>  
+            <button className='ButtonSmallReport'>Отчет</button>
+            <button className='ButtonSmallPlane'>План</button>  
           </div>
         </div>
         
