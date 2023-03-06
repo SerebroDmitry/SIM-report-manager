@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/Autorization.css'
 import { useEffect } from 'react'
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import { setAutorizationStatus, setUser } from '../store/Reducers/userReducer';
 
 const Autorization = () => {
@@ -19,14 +19,19 @@ const Autorization = () => {
   let find = 9999;
 
 
+  const isAutorized = useSelector((state) => state.user.isAutorized)
   //без этого кнопка входа с первого раза не работает
   useEffect(() => {
-    fetch(usersUrl)
-      .then((response) => response.json())
-      .then((response) => {
-        data = response
-        // setData(response)
-      });
+    if (isAutorized !== 'false') {
+      document.location = '/projects' 
+    } else {
+        fetch(usersUrl)
+          .then((response) => response.json())
+          .then((response) => {
+            data = response
+            // setData(response)
+          });
+      }
   }, []);
 
 

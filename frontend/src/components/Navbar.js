@@ -17,7 +17,6 @@ const Navbar = () => {
       document.getElementById("userInfo").innerHTML = user.surname + ' ' + user.name + ' ' + user.dads_name
       document.getElementById("exitButton").style.display = 'block'
       document.getElementById("LinksDiv").style.display = 'flex'
-
     } 
   }, [])
   
