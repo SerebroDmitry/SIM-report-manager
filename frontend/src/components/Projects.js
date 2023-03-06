@@ -26,7 +26,11 @@ const Projects = () => {
           <span className='ErpGfcName'>,    ГФК: </span>
           <span className='Information'>{item.GFK}</span><br />
           <span className='ErpGfcName'>Наименование: </span>
-          <span className='Information'>{item.object_name}</span>
+          <span className='Information'>{item.object_name}</span><br />
+          <div className='buttonsDiv'>
+            <button className='ButtonSmall'>Отчет</button>
+            <button className='ButtonSmall'>План</button>  
+          </div>
         </div>
         
       </div>

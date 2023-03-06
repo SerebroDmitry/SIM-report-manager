@@ -32,3 +32,15 @@
 .Information {
     font-size: 13px;
 }
+
+.buttonsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtonSmall {
+    font-size: 13px;
+    margin: 5px;
+    width: 7vh;
+}
